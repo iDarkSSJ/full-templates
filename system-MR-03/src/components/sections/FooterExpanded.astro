@@ -4,7 +4,6 @@ import FooterFormExpanded from "@ui/forms/FooterFormExpanded.astro";
 // Import data for dynamic rendering
 import { featuresMenu } from "@utils/megaMenu/features";
 import { platformMenu } from "@utils/megaMenu/platform";
-import { supportMenu } from "@utils/megaMenu/support";
 
 // Props for customization
 const companyName = "WEBit Analytics Inc.";
@@ -86,25 +85,7 @@ const trademarkNotice =
         </div>
       </div>
 
-      {/* Support Links */}
-      <div>
-        <h3 class="font-semibold text-slate-700">Support</h3>
-        <div class="mt-3 text-sm">
-          <ul class="space-y-3">
-            {
-              supportMenu
-                .flatMap((support) => support.items)
-                .map((item) => (
-                  <li>
-                    <a class="text-sm text-slate-600" href={item.href}>
-                      {item.title}
-                    </a>
-                  </li>
-                ))
-            }
-          </ul>
-        </div>
-      </div>
+
     </div>
 
     {/* Divider before subscription form section */}
